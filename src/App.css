@@ -1,0 +1,91 @@
+/* General layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Container for army + collection */
+div {
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- Bot Army --- */
+.your-bot-army {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #212529;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.your-bot-army h2 {
+  color: #fff;
+}
+
+/* --- Bot Collection --- */
+.bot-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* --- Individual Bot Card --- */
+.bot-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.bot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Bot Image --- */
+.bot-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* --- Bot Details --- */
+.bot-card h3 {
+  margin: 10px 0 5px;
+  color: #007bff;
+}
+
+.bot-card p {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+/* --- Delete Button --- */
+.bot-card button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-weight: bold;
+  color: white;
+  background-color: crimson;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bot-card button:hover {
+  background-color: #ff4d4d;
+}
