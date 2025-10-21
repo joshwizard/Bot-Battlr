@@ -8,7 +8,7 @@ function App() {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("https://json-server-vercel-mu-sage.vercel.app/bots")
       .then((res) => res.json())
       .then((data) => setBots(data));
   }, []);
@@ -24,7 +24,7 @@ function App() {
   }
 
   function dischargeBot(bot) {
-    fetch(`http://localhost:3000/bots${bot.id}`, { method: "DELETE" })
+    fetch(`https://json-server-vercel-mu-sage.vercel.app/bots${bot.id}`, { method: "DELETE" })
       .then(() => {
         setArmy(army.filter((b) => b.id !== bot.id));
         setBots(bots.filter((b) => b.id !== bot.id));
